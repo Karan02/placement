@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
+const serverless = require("serverless-http");
 const passportLocal = require('./config/passport-local-startegy');
 const port = process.env.PORT || 8000;
 
@@ -49,3 +50,4 @@ app.listen(port, function (error) {
 	}
 	console.log(`Server running on port: ${port}`);
 });
+export const handler = serverless(api);
