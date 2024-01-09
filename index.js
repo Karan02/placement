@@ -40,7 +40,7 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
 // express router
-app.use('/api', require('./routes'));
+app.use('/api/', require('./routes'));
 
 // listen on port
 // app.listen(port, function (error) {
