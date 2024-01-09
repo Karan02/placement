@@ -50,4 +50,4 @@ app.use('/api/', require('./routes'));
 // 	}
 // 	console.log(`Server running on port: ${port}`);
 // });
-export const handler = serverless(api);
+// export const handler = serverless(api);
