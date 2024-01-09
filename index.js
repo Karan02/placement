@@ -40,14 +40,14 @@ app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
 // express router
-app.use('/', require('./routes'));
+app.use('/api', require('./routes'));
 
 // listen on port
-app.listen(port, function (error) {
-	if (error) {
-		console.log(`Error in connecting to server: ${error}`);
-		return;
-	}
-	console.log(`Server running on port: ${port}`);
-});
+// app.listen(port, function (error) {
+// 	if (error) {
+// 		console.log(`Error in connecting to server: ${error}`);
+// 		return;
+// 	}
+// 	console.log(`Server running on port: ${port}`);
+// });
 export const handler = serverless(api);
